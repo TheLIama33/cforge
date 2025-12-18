@@ -1,0 +1,23 @@
+# Binaries
+/cforge
+/cforge.exe
+/bin/
+/dist/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dependencies
+/vendor/
+
+# Local Config
+.cforge.json
+
+# Test output
+coverage.out
