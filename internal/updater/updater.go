@@ -24,7 +24,7 @@ func CheckAndUpdate(currentVersionStr string, repoSlug string) (*UpdateResult, e
 		return nil, fmt.Errorf("invalid current version syntax '%s': %w", currentVersionStr, err)
 	}
 
-	fmt.Println("🔍 Checking for updates...")
+	fmt.Println("Checking for updates...")
 	latest, found, err := selfupdate.DetectLatest(repoSlug)
 	if err != nil {
 		return nil, fmt.Errorf("error checking GitHub for updates: %w", err)

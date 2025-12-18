@@ -1,8 +1,8 @@
 $Repo = "TheLIama33/cforge"
 $BinaryName = "cforge.exe"
 
-$Arch = if ($env:PROCESSOR_ARCHITECTURE -eq "AMD64") { "x86_64" } else { "arm64" }
-$ZipName = "cforge_Windows_$Arch.zip"
+$Arch = if ($env:PROCESSOR_ARCHITECTURE -eq "AMD64") { "amd64" } else { "arm64" }
+$ZipName = "cforge_windows_$Arch.zip"
 $DownloadUrl = "https://github.com/$Repo/releases/latest/download/$ZipName"
 
 $InstallDir = "$env:LOCALAPPDATA\cforge"
