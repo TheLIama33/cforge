@@ -15,9 +15,10 @@ var (
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "cforge",
-	Short: "ContextForge: Copy code context to clipboard",
-	Long:  `Scan your project, filter files, and copy them to the system clipboard for LLM usage.`,
+	Use:     "cforge",
+	Short:   "ContextForge: Copy code context to clipboard",
+	Long:    `Scan your project, filter files, and copy them to the system clipboard for LLM usage.`,
+	Version: Version,
 	PersistentPreRunE: func(cmd *cobra.Command, args []string) error {
 		if cmd.Name() == "init" || cmd.Name() == "version" || cmd.Name() == "update" {
 			return nil
