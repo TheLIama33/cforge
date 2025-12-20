@@ -7,7 +7,7 @@ import (
 	"github.com/TheLIama33/cforge/internal/output"
 	"github.com/TheLIama33/cforge/internal/scanner"
 	"github.com/TheLIama33/cforge/internal/tokenizer"
-	"github.com/atotto/clipboard"
+	"github.com/TheLIama33/cforge/internal/utils"
 	"github.com/spf13/cobra"
 )
 
@@ -64,7 +64,7 @@ func runScan(cmd *cobra.Command, args []string) error {
 		fmt.Print(finalOutput)
 	} else {
 		if appConfig.Global.CopyToClipboard {
-			if err := clipboard.WriteAll(finalOutput); err != nil {
+			if err := utils.WriteToClipboard(finalOutput); err != nil {
 				return fmt.Errorf("clipboard failure: %w", err)
 			}
 			fmt.Printf("Copied %d files to system clipboard!\n", len(results))
